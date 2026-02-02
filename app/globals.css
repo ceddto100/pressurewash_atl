@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+.gradient-hero {
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.2), transparent 40%),
+    #ffffff;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur border border-slate-200 shadow-soft;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm;
+}
+
+.section-title {
+  @apply text-3xl font-semibold text-slate-900 sm:text-4xl;
+}
+
+.section-subtitle {
+  @apply mt-3 text-base text-slate-600 sm:text-lg;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
+}
+
+.label {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-200;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-600 px-6 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-200;
+}
+
+.link-brand {
+  @apply text-brand-600 hover:text-brand-700 font-semibold;
+}
