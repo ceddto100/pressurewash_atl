@@ -3,11 +3,11 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://example.com/",
+      url: "https://pressurewashofatlanta.com/",
       lastModified: new Date()
     },
     {
-      url: "https://example.com/thank-you",
+      url: "https://pressurewashofatlanta.com/thank-you",
       lastModified: new Date()
     }
   ];

@@ -12,12 +12,38 @@ export async function POST(request: Request) {
     size: formData.get("size"),
     spigot: formData.get("spigot"),
     contactMethod: formData.get("contactMethod"),
-    timeWindow: formData.get("timeWindow")
+    notes: formData.get("notes")
   };
 
-  // TODO: Connect to Resend or Nodemailer and send quote request emails.
-  // This stub keeps the interface clean while you add credentials later.
-  console.log("Quote request received", payload);
+  const response = await fetch(
+    "https://formsubmit.co/ajax/cartercedric35@gmail.com",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        _subject: "New Pressure Wash of Atlanta Quote Request",
+        Name: payload.name,
+        Phone: payload.phone,
+        Email: payload.email,
+        Address: payload.address,
+        Services: payload.services.map((item) => String(item)).join(", "),
+        "Approximate Size": payload.size,
+        "Exterior Spigot": payload.spigot,
+        "Preferred Contact Method": payload.contactMethod,
+        "Additional Notes": payload.notes
+      })
+    }
+  );
+
+  if (!response.ok) {
+    return NextResponse.json(
+      { ok: false, error: "Unable to send request." },
+      { status: 500 }
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }

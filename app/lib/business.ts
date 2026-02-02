@@ -1,19 +1,20 @@
 export const business = {
-  name: "[YOUR BUSINESS NAME]",
-  phone: "[YOUR PHONE]",
-  phoneDisplay: "[YOUR PHONE]",
-  email: "[YOUR EMAIL]",
-  area: "Metro Atlanta, GA",
+  name: "Pressure Wash of Atlanta",
+  phone: "4045096599",
+  phoneDisplay: "404-509-6599",
+  email: "cartercedric35@gmail.com",
+  area: "Metro Atlanta, Georgia",
   suburbs: [
+    "Atlanta",
     "Sandy Springs",
     "Marietta",
     "Smyrna",
     "Decatur",
-    "Dunwoody",
     "Brookhaven",
+    "Dunwoody",
     "Alpharetta"
   ],
-  address: "Metro Atlanta, GA"
+  address: "Metro Atlanta, Georgia"
 };
 
 export const businessSchema = {
@@ -21,15 +22,17 @@ export const businessSchema = {
   "@type": "LocalBusiness",
   name: business.name,
   image: "/images/og-image.svg",
-  url: "https://example.com",
-  telephone: business.phone,
+  url: "https://pressurewashofatlanta.com",
+  telephone: `+1${business.phone}`,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Atlanta",
     addressRegion: "GA",
     addressCountry: "US"
   },
-  areaServed: business.suburbs,
+  areaServed: ["Metro Atlanta, Georgia", ...business.suburbs],
   priceRange: "$149+",
-  email: business.email
+  email: business.email,
+  description:
+    "Locally owned and operated exterior cleaning company serving Metro Atlanta with professional pressure washing and soft washing for residential surfaces."
 };

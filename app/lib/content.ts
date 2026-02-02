@@ -1,9 +1,9 @@
 export const services = [
   {
-    title: "Driveway Cleaning",
+    title: "Driveway & Concrete Cleaning",
     description:
-      "Lift oil spots, algae, and red clay to restore curb appeal and protect concrete.",
-    surfaces: "Concrete, pavers, exposed aggregate"
+      "Lift oil spots, algae, and red clay buildup to restore curb appeal and protect concrete.",
+    surfaces: "Concrete driveways, pads, pavers"
   },
   {
     title: "Sidewalks & Walkways",
@@ -15,19 +15,19 @@ export const services = [
     title: "Patios & Porches",
     description:
       "Refresh outdoor living spaces without etching or streaking.",
-    surfaces: "Concrete, pavers, tile"
+    surfaces: "Concrete, pavers, tile, porch slabs"
   },
   {
-    title: "House Wash (Soft Wash)",
+    title: "House Washing (Soft Wash for Siding)",
     description:
-      "Gentle cleaning that removes algae and buildup without damaging siding.",
+      "Gentle soft washing that removes algae and organic buildup without damaging siding.",
     surfaces: "Vinyl, brick, painted surfaces"
   },
   {
-    title: "Garage Doors & Entryways",
+    title: "Entryways & Front Steps",
     description:
       "Brighten high-visibility areas for a clean, welcoming entrance.",
-    surfaces: "Metal, painted wood, stone"
+    surfaces: "Concrete, brick, stone, painted surfaces"
   },
   {
     title: "Light Fence Cleaning",
@@ -43,35 +43,35 @@ export const testimonials = [
     neighborhood: "Sandy Springs",
     rating: 5,
     quote:
-      "The driveway looks brand new. Quick response, clear pricing, and spotless results."
+      "The driveway looks brand new and the crew was respectful of our landscaping. Quick response and spotless results."
   },
   {
     name: "Alyssa M.",
     neighborhood: "Decatur",
     rating: 5,
     quote:
-      "They removed years of algae from our siding without any damage. Super professional."
+      "They removed years of algae from our siding without any damage. Super professional and communicative."
   },
   {
     name: "Marcus T.",
     neighborhood: "Marietta",
     rating: 5,
     quote:
-      "On time, friendly, and the patio looks amazing. We booked again for the fall."
+      "On time, friendly, and the patio looks amazing. We already booked another service."
   },
   {
     name: "Priya S.",
     neighborhood: "Dunwoody",
     rating: 5,
     quote:
-      "Loved the before/after walk-through. The team explained everything clearly."
+      "Loved the before-and-after walkthrough. The team explained everything clearly."
   },
   {
     name: "Daniel R.",
     neighborhood: "Smyrna",
     rating: 5,
     quote:
-      "Great service and strong attention to detail. My walkway is bright again."
+      "Great service and strong attention to detail. Our walkway is bright again."
   },
   {
     name: "Kim L.",
@@ -88,8 +88,8 @@ export const testimonials = [
       "Pricing was clear and fair. The crew protected our landscaping, too."
   },
   {
-    name: "Chris W.",
-    neighborhood: "Roswell",
+    name: "Erin W.",
+    neighborhood: "Atlanta",
     rating: 5,
     quote:
       "Our brick entryway looks incredible. Easy process from start to finish."
@@ -105,7 +105,7 @@ export const faqs = [
   {
     question: "Do you need a water source?",
     answer:
-      "Yes. For now we require a working exterior spigot on-site. We’ll confirm access before arrival."
+      "Yes. Residential service uses the home’s exterior water spigot, and we’ll confirm access before arrival."
   },
   {
     question: "Is soft washing safe for siding?",

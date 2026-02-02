@@ -6,13 +6,13 @@ import { business, businessSchema } from "./lib/business";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${business.name} | Premium Pressure Washing in Metro Atlanta`,
+  title: "Pressure Wash of Atlanta | Metro Atlanta Pressure Washing",
   description:
-    "Premium pressure washing and soft washing for Metro Atlanta homes. Fast scheduling, honest quotes, and surface-safe cleaning.",
+    "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
   openGraph: {
-    title: `${business.name} | Premium Pressure Washing in Metro Atlanta`,
+    title: "Pressure Wash of Atlanta | Metro Atlanta Pressure Washing",
     description:
-      "Premium pressure washing and soft washing for Metro Atlanta homes. Fast scheduling, honest quotes, and surface-safe cleaning.",
+      "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
     type: "website",
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       }
     ]
   },
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://pressurewashofatlanta.com"),
   alternates: {
     canonical: "/"
   }
