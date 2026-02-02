@@ -127,26 +127,26 @@ export const faqs = [
 export const gallery = [
   {
     title: "Concrete Driveway",
-    before: "/images/before-after/driveway-before.svg",
-    after: "/images/before-after/driveway-after.svg",
+    before: "/images/before-after/driveway-before.png",
+    after: "/images/before-after/driveway-after.png",
     slider: true
   },
   {
     title: "Sidewalk + Front Porch",
-    before: "/images/before-after/sidewalk-before.svg",
-    after: "/images/before-after/sidewalk-after.svg",
+    before: "/images/before-after/sidewalk-before.png",
+    after: "/images/before-after/sidewalk-after.png",
     slider: true
   },
   {
     title: "House Siding Soft Wash",
-    before: "/images/before-after/siding-before.svg",
-    after: "/images/before-after/siding-after.svg",
+    before: "/images/before-after/siding-before.png",
+    after: "/images/before-after/siding-after.png",
     slider: true
   },
   {
     title: "Patio / Backyard Concrete",
-    before: "/images/before-after/patio-before.svg",
-    after: "/images/before-after/patio-after.svg",
+    before: "/images/before-after/patio-before.png",
+    after: "/images/before-after/patio-after.png",
     slider: false
   },
   {
@@ -157,8 +157,8 @@ export const gallery = [
   },
   {
     title: "Fence Section",
-    before: "/images/before-after/fence-before.svg",
-    after: "/images/before-after/fence-after.svg",
+    before: "/images/before-after/fence-before.png",
+    after: "/images/before-after/fence-after.png",
     slider: false
   }
 ];
