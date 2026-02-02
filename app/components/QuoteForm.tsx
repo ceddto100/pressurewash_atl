@@ -13,30 +13,24 @@ type FormState = {
   size: string;
   spigot: string;
   contactMethod: string;
-  timeWindow: string;
+  notes: string;
 };
 
 const serviceOptions = [
-  "Driveway cleaning",
-  "Sidewalks & walkways",
-  "Patios & porches",
-  "House wash (soft wash)",
-  "Garage doors / entryways",
-  "Light fence cleaning"
+  "Driveway & Concrete Cleaning",
+  "Sidewalks & Walkways",
+  "Patios & Porches",
+  "House Washing (Soft Wash for Siding)",
+  "Entryways & Front Steps",
+  "Light Fence Cleaning"
 ];
 
 const sizeOptions = [
-  "Small (1-car driveway or small patio)",
-  "Medium (2-car driveway or mid-size home)",
-  "Large (3-car driveway or larger home)",
-  "Not sure"
-];
-
-const timeOptions = [
-  "Weekday mornings",
-  "Weekday afternoons",
-  "Weekends",
-  "Flexible"
+  "Under 500 sq ft",
+  "500–1,000 sq ft",
+  "1,000–2,000 sq ft",
+  "2,000+ sq ft",
+  "Not sure yet"
 ];
 
 export default function QuoteForm() {
@@ -52,11 +46,13 @@ export default function QuoteForm() {
     size: "",
     spigot: "",
     contactMethod: "Text",
-    timeWindow: ""
+    notes: ""
   });
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     const { name, value } = event.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
@@ -83,7 +79,8 @@ export default function QuoteForm() {
       formState.services.length === 0 ||
       !formState.size ||
       !formState.spigot ||
-      !formState.timeWindow
+      !formState.contactMethod ||
+      !formState.notes
     ) {
       setError("Please complete all required fields.");
       return;
@@ -120,7 +117,7 @@ export default function QuoteForm() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label className="label" htmlFor="name">
-            Name
+            Full Name
           </label>
           <input
             className="input"
@@ -128,13 +125,12 @@ export default function QuoteForm() {
             name="name"
             value={formState.name}
             onChange={handleChange}
-            placeholder="Full name"
             required
           />
         </div>
         <div className="space-y-2">
           <label className="label" htmlFor="phone">
-            Phone
+            Phone Number
           </label>
           <input
             className="input"
@@ -143,13 +139,12 @@ export default function QuoteForm() {
             type="tel"
             value={formState.phone}
             onChange={handleChange}
-            placeholder="(555) 123-4567"
             required
           />
         </div>
         <div className="space-y-2">
           <label className="label" htmlFor="email">
-            Email
+            Email Address
           </label>
           <input
             className="input"
@@ -158,13 +153,12 @@ export default function QuoteForm() {
             type="email"
             value={formState.email}
             onChange={handleChange}
-            placeholder="you@email.com"
             required
           />
         </div>
         <div className="space-y-2">
           <label className="label" htmlFor="address">
-            Address or ZIP
+            Service Address or ZIP Code
           </label>
           <input
             className="input"
@@ -172,14 +166,13 @@ export default function QuoteForm() {
             name="address"
             value={formState.address}
             onChange={handleChange}
-            placeholder="Street address or ZIP"
             required
           />
         </div>
       </div>
 
       <div className="space-y-3">
-        <p className="label">Service requested (select all that apply)</p>
+        <p className="label">Services Requested (select all that apply)</p>
         <div className="grid gap-3 sm:grid-cols-2">
           {serviceOptions.map((service) => (
             <label
@@ -203,7 +196,7 @@ export default function QuoteForm() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label className="label" htmlFor="size">
-            Approximate size
+            Approximate Size
           </label>
           <select
             className="input"
@@ -223,7 +216,7 @@ export default function QuoteForm() {
         </div>
         <div className="space-y-2">
           <label className="label" htmlFor="spigot">
-            Do you have an exterior water spigot available?
+            Exterior Water Spigot Available?
           </label>
           <select
             className="input"
@@ -238,13 +231,12 @@ export default function QuoteForm() {
             <option value="No">No</option>
           </select>
           <p className="text-xs text-slate-500">
-            We currently require a working exterior spigot at the service
-            location.
+            Residential service uses the home’s exterior water spigot.
           </p>
         </div>
         <div className="space-y-2">
           <label className="label" htmlFor="contactMethod">
-            Preferred contact method
+            Preferred Contact Method
           </label>
           <select
             className="input"
@@ -252,49 +244,27 @@ export default function QuoteForm() {
             name="contactMethod"
             value={formState.contactMethod}
             onChange={handleChange}
+            required
           >
             <option value="Call">Call</option>
             <option value="Text">Text</option>
             <option value="Email">Email</option>
           </select>
         </div>
-        <div className="space-y-2">
-          <label className="label" htmlFor="timeWindow">
-            Preferred time window
-          </label>
-          <select
-            className="input"
-            id="timeWindow"
-            name="timeWindow"
-            value={formState.timeWindow}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select availability</option>
-            {timeOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
       </div>
 
       <div className="space-y-2">
-        <label className="label" htmlFor="photos">
-          Upload photos (optional)
+        <label className="label" htmlFor="notes">
+          Additional Notes
         </label>
-        <input
-          className="input"
-          id="photos"
-          name="photos"
-          type="file"
-          multiple
+        <textarea
+          className="input min-h-[96px]"
+          id="notes"
+          name="notes"
+          value={formState.notes}
+          onChange={handleChange}
+          required
         />
-        <p className="text-xs text-slate-500">
-          Photos help us provide more accurate quotes. Maximum file size limits
-          apply based on hosting.
-        </p>
       </div>
 
       {error && (
@@ -307,7 +277,11 @@ export default function QuoteForm() {
         {loading ? "Submitting..." : "Get a Free Quote"}
       </button>
       <p className="text-center text-xs text-slate-500">
-        Prefer to talk now? Call or text {business.phoneDisplay}.
+        Prefer to talk now?{" "}
+        <a className="text-brand-700 underline" href={`tel:${business.phone}`}>
+          Call or Text {business.phoneDisplay}
+        </a>
+        .
       </p>
     </form>
   );

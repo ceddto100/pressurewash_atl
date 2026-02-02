@@ -28,14 +28,14 @@ export default function Header() {
             href="#quote"
             className="button-secondary hidden sm:inline-flex"
           >
-            Get a Quote
+            Get a Free Quote
           </a>
           <a
             href={`tel:${business.phone}`}
             className="button-primary"
-            aria-label={`Call or text ${business.phoneDisplay}`}
+            aria-label={`Call or Text ${business.phoneDisplay}`}
           >
-            Call/Text Now
+            Call or Text {business.phoneDisplay}
           </a>
         </div>
       </div>

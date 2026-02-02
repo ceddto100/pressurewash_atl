@@ -11,15 +11,15 @@ export default function ThankYouPage() {
         Thanks for reaching out!
       </h1>
       <p className="mt-4 text-lg text-slate-600">
-        We’ll review your details and follow up quickly with next steps and a
-        clear estimate.
+        We’ll review your details and follow up within 24 hours with next steps
+        and a clear estimate.
       </p>
       <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <Link href="/" className="button-secondary">
-          Back to Home
+        <Link href="/#quote" className="button-secondary">
+          Request Service in Metro Atlanta
         </Link>
         <a href={`tel:${business.phone}`} className="button-primary">
-          Call/Text {business.phoneDisplay}
+          Call or Text {business.phoneDisplay}
         </a>
       </div>
     </main>

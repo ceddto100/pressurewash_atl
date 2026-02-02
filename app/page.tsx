@@ -7,8 +7,8 @@ import { business } from "./lib/business";
 import { faqs, gallery, services, testimonials } from "./lib/content";
 
 const trustBadges = [
-  "Licensed & Insured",
-  "Satisfaction Guaranteed",
+  "Locally Owned",
+  "Surface-Safe Cleaning",
   "Free Quotes"
 ];
 
@@ -34,8 +34,11 @@ export default function Home() {
                 pressure washing.
               </h1>
               <p className="text-lg text-slate-600">
-                Fast scheduling across {business.area}. We remove algae, mildew,
-                and stains without damaging surfaces.
+                Pressure Wash of Atlanta is a locally owned and operated
+                exterior cleaning company serving homeowners across Metro
+                Atlanta. We specialize in professional pressure washing and soft
+                washing that removes dirt, algae, mildew, and organic buildup
+                while protecting your surfaces.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#quote" className="button-primary">
@@ -45,7 +48,10 @@ export default function Home() {
                   href={`tel:${business.phone}`}
                   className="button-secondary"
                 >
-                  Call/Text {business.phoneDisplay}
+                  Call or Text {business.phoneDisplay}
+                </a>
+                <a href="#service-area" className="button-secondary">
+                  Request Service in Metro Atlanta
                 </a>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -65,7 +71,7 @@ export default function Home() {
                 <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src="/images/before-after/driveway-after.svg"
-                    alt="Sample pressure washed driveway"
+                    alt="Pressure washed driveway in Metro Atlanta"
                     width={800}
                     height={600}
                     className="h-full w-full object-cover"
@@ -90,7 +96,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-4 text-xs text-slate-500">
-                  Replace with your real photos once available.
+                  Recent residential results across Metro Atlanta.
                 </p>
               </div>
             </div>
@@ -126,7 +132,7 @@ export default function Home() {
                   </p>
                 </div>
                 <a href="#quote" className="link-brand mt-6">
-                  Get a quote →
+                  Get a Free Quote
                 </a>
               </div>
             ))}
@@ -136,10 +142,10 @@ export default function Home() {
         <section id="gallery" className="bg-slate-50">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
-              <h2 className="section-title">Before & after results</h2>
+              <h2 className="section-title">Recent Results</h2>
               <p className="section-subtitle">
-                Sample results shown below. Replace these images with your real
-                project photos to build even more trust.
+                See the difference professional pressure washing makes on
+                concrete, siding, and outdoor living areas.
               </p>
             </div>
             <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -179,7 +185,7 @@ export default function Home() {
                         {item.title}
                       </h3>
                       <p className="text-sm text-slate-600">
-                        Sample results (replace with your photos).
+                        Before-and-after comparison.
                       </p>
                     </div>
                   </div>
@@ -194,14 +200,17 @@ export default function Home() {
             <div className="max-w-2xl">
               <h2 className="section-title">Local homeowners love the results</h2>
               <p className="section-subtitle">
-                Sample rating — replace with real numbers once available.
+                5-star feedback from Metro Atlanta homeowners who wanted
+                cleaner, brighter exteriors.
               </p>
             </div>
             <div className="rounded-2xl border border-brand-100 bg-brand-50 px-6 py-4">
               <p className="text-sm font-semibold text-brand-700">
-                5.0 average from 80+ homeowners
+                5-star local feedback
               </p>
-              <p className="text-xs text-brand-600">Sample rating</p>
+              <p className="text-xs text-brand-600">
+                Consistently rated for professionalism and results.
+              </p>
             </div>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -250,30 +259,29 @@ export default function Home() {
                   Minimum service call
                 </p>
                 <p className="mt-4 text-3xl font-semibold text-slate-900">
-                  $149+
+                  $149
                 </p>
                 <p className="mt-2 text-sm text-slate-600">
-                  Covers travel, setup, and standard driveway or small patio
-                  cleaning.
+                  Minimum service call for residential pressure washing.
                 </p>
               </div>
               <div className="glass-card rounded-2xl p-6">
                 <p className="text-sm font-semibold text-slate-500">
-                  Driveways & concrete
+                  Driveway & concrete cleaning
                 </p>
                 <p className="mt-4 text-3xl font-semibold text-slate-900">
-                  From $149
+                  Starting at $149
                 </p>
                 <p className="mt-2 text-sm text-slate-600">
-                  Includes rinse, spot treatment, and surface-safe cleaning.
+                  Surface-safe cleaning to lift dirt, mildew, and stains.
                 </p>
               </div>
               <div className="glass-card rounded-2xl p-6">
                 <p className="text-sm font-semibold text-slate-500">
-                  House wash (soft wash)
+                  House Washing (Soft Wash for Siding)
                 </p>
                 <p className="mt-4 text-3xl font-semibold text-slate-900">
-                  From $199
+                  Starting at $199
                 </p>
                 <p className="mt-2 text-sm text-slate-600">
                   Gentle exterior cleaning for siding and trim.
@@ -281,9 +289,10 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8 flex flex-col gap-3 text-sm text-slate-600">
-              <p>Bundle discounts available when combining multiple services.</p>
+              <p>Bundled services available for added value.</p>
               <p>
-                Final price depends on size, staining, access, and surface type.
+                Final pricing depends on surface size, condition, access, and
+                level of staining.
               </p>
             </div>
           </div>
@@ -310,8 +319,8 @@ export default function Home() {
               <div className="mt-6 rounded-2xl border border-brand-100 bg-brand-50 p-6 text-sm text-brand-700">
                 <p className="font-semibold">Water source note</p>
                 <p className="mt-2">
-                  We do not yet have a water tank, so a working exterior spigot is
-                  required at the service location.
+                  Residential service uses the home’s exterior water spigot at
+                  the service location.
                 </p>
               </div>
             </div>
@@ -327,8 +336,8 @@ export default function Home() {
               <div>
                 <h2 className="section-title">Proudly serving Metro Atlanta</h2>
                 <p className="section-subtitle">
-                  We service homes and small commercial properties across the
-                  metro area.
+                  We focus on residential pressure washing across the metro
+                  area, including the neighborhoods below.
                 </p>
                 <ul className="mt-6 grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
                   {business.suburbs.map((suburb) => (
@@ -350,11 +359,15 @@ export default function Home() {
                   <span className="text-2xl">📍</span>
                 </div>
                 <p className="mt-4 text-lg font-semibold text-slate-900">
-                  Metro Atlanta Service Map
+                  Request Service in Metro Atlanta
                 </p>
                 <p className="mt-2 text-sm text-slate-600">
-                  Replace this card with a Google Map embed once you’re ready.
+                  Tell us which surfaces you want cleaned and we’ll confirm
+                  availability quickly.
                 </p>
+                <a href="#quote" className="button-primary mt-6 w-full">
+                  Request Service in Metro Atlanta
+                </a>
               </div>
             </div>
           </div>
@@ -382,8 +395,11 @@ export default function Home() {
               Need quick answers?
             </p>
             <p className="mt-2">
-              Call or text {business.phoneDisplay} and we’ll help you plan the
-              right service.
+              Call or Text{" "}
+              <a className="text-brand-700 underline" href={`tel:${business.phone}`}>
+                {business.phoneDisplay}
+              </a>{" "}
+              and we’ll help you plan the right service.
             </p>
           </div>
         </section>
@@ -392,38 +408,35 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
-                <h2 className="section-title">Make it yours in minutes</h2>
+                <h2 className="section-title">Why homeowners choose us</h2>
                 <p className="section-subtitle">
-                  Swap in real photos, update pricing, and replace sample reviews
-                  to match your real customer data.
+                  We treat every home with care, focusing on surface protection,
+                  curb appeal, and long-lasting results.
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-600">
                   <li>
-                    Replace the images in <strong>/public/images</strong> with
-                    your real before/after photos.
+                    Locally owned with service tailored to Metro Atlanta
+                    neighborhoods.
                   </li>
                   <li>
-                    Update testimonials and pricing ranges in
-                    <strong> app/lib/content.ts</strong>.
+                    Soft wash methods for siding and delicate exterior surfaces.
                   </li>
                   <li>
-                    Edit business contact info in
-                    <strong> app/lib/business.ts</strong>.
+                    Clear communication from quote to final walkthrough.
                   </li>
                 </ul>
               </div>
               <div className="glass-card rounded-3xl p-8 text-sm text-slate-600">
                 <p className="font-semibold text-slate-900">
-                  Compliance & trust note
+                  Ready to refresh your exterior?
                 </p>
                 <p className="mt-3">
-                  Update any claims (like licensing, insurance, ratings) once you
-                  have the supporting documentation. Keep your copy accurate to
-                  build trust with Metro Atlanta homeowners.
+                  Request service today and we’ll confirm details, provide a
+                  transparent quote, and schedule service that fits your week.
                 </p>
                 <div className="mt-6">
                   <Link href="#quote" className="button-primary w-full">
-                    Request a Quote
+                    Request Service in Metro Atlanta
                   </Link>
                 </div>
               </div>
@@ -441,8 +454,19 @@ export default function Home() {
           </div>
           <div>
             <p className="font-semibold text-slate-900">Contact</p>
-            <p className="mt-2">{business.phoneDisplay}</p>
-            <p className="mt-1">{business.email}</p>
+            <p className="mt-2">
+              <a className="hover:text-slate-900" href={`tel:${business.phone}`}>
+                {business.phoneDisplay}
+              </a>
+            </p>
+            <p className="mt-1">
+              <a
+                className="hover:text-slate-900"
+                href={`mailto:${business.email}`}
+              >
+                {business.email}
+              </a>
+            </p>
           </div>
           <div>
             <p className="font-semibold text-slate-900">Hours</p>
