@@ -151,9 +151,9 @@ export const gallery = [
   },
   {
     title: "Brick Entryway",
-    before: "/images/before-after/brick-before.svg",
-    after: "/images/before-after/brick-after.svg",
-    slider: false
+    before: "/images/before-after/brick-before.png",
+    after: "/images/before-after/brick-after.png",
+    slider: true
   },
   {
     title: "Fence Section",
