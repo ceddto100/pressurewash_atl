@@ -2,7 +2,7 @@ export const business = {
   name: "Pressure Wash of Atlanta",
   phone: "4045096599",
   phoneDisplay: "404-509-6599",
-  email: "cartercedric35@gmail.com",
+  email: "cartercedrick35@gmail.com",
   area: "Metro Atlanta, Georgia",
   suburbs: [
     "Atlanta",
@@ -21,7 +21,7 @@ export const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: business.name,
-  image: "/images/og-image.svg",
+  image: "/images/og-image.png",
   url: "https://pressurewashofatlanta.com",
   telephone: `+1${business.phone}`,
   address: {
