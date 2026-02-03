@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { business } from "../lib/business";
 
@@ -13,8 +14,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="#top" className="text-lg font-semibold text-slate-900">
-          {business.name}
+        <Link href="#top" className="flex items-center">
+          <Image
+            src="/images/Pressure Washing Logo.png"
+            alt="Pressure Wash of Atlanta logo"
+            width={180}
+            height={48}
+            className="h-12 w-auto"
+            priority
+          />
+          <span className="sr-only">{business.name}</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
           {navItems.map((item) => (
