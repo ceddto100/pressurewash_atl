@@ -9,11 +9,37 @@ export const metadata: Metadata = {
   title: "Pressure Wash of Atlanta | Metro Atlanta Pressure Washing",
   description:
     "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
+  keywords: [
+    "pressure washing",
+    "pressure washing atlanta",
+    "soft washing",
+    "house washing",
+    "driveway cleaning",
+    "roof washing",
+    "deck cleaning",
+    "fence cleaning",
+    "residential pressure washing",
+    "exterior cleaning",
+    "metro atlanta pressure washing",
+    "pressure wash of atlanta"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    }
+  },
   openGraph: {
     title: "Pressure Wash of Atlanta | Metro Atlanta Pressure Washing",
     description:
       "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
     type: "website",
+    url: "https://pressurewashofatlanta.com",
     images: [
       {
         url: "/images/og-image.svg",
@@ -22,6 +48,13 @@ export const metadata: Metadata = {
         alt: "Pressure washing services in Metro Atlanta"
       }
     ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pressure Wash of Atlanta | Metro Atlanta Pressure Washing",
+    description:
+      "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
+    images: ["/images/og-image.svg"]
   },
   metadataBase: new URL("https://pressurewashofatlanta.com"),
   alternates: {
