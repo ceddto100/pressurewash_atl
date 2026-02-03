@@ -70,8 +70,8 @@ export default function Home() {
               <div className="glass-card rounded-3xl p-6">
                 <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src="/images/before-after/driveway-after.svg"
-                    alt="Pressure washed driveway in Metro Atlanta"
+                    src="/images/og-image.png"
+                    alt="Pressure washed home in Metro Atlanta"
                     width={800}
                     height={600}
                     className="h-full w-full object-cover"
