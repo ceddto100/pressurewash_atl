@@ -26,7 +26,23 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://pressurewashofatlanta.com"),
   alternates: {
     canonical: "/"
-  }
+  },
+  icons: {
+    icon: [
+      { url: "/images/favicon.ico", sizes: "any" },
+      { url: "/images/favicon.svg", type: "image/svg+xml" },
+      { url: "/images/favicon-96x96.png", sizes: "96x96", type: "image/png" }
+    ],
+    apple: [
+      {
+        url: "/images/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png"
+      }
+    ],
+    shortcut: ["/images/favicon.ico"]
+  },
+  manifest: "/images/site.webmanifest"
 };
 
 export default function RootLayout({
