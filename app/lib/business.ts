@@ -22,7 +22,7 @@ export const businessSchema = {
   "@type": "LocalBusiness",
   name: business.name,
   image: "/images/og-image.png",
-  url: "https://pressurewashofatlanta.com",
+  url: "https://pressurewash-atl.vercel.app",
   telephone: `+1${business.phone}`,
   address: {
     "@type": "PostalAddress",

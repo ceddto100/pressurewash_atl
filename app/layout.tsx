@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description:
       "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
     type: "website",
-    url: "https://pressurewashofatlanta.com",
+    url: "https://pressurewash-atl.vercel.app",
     images: [
       {
         url: "/images/og-image.svg",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Pressure Wash of Atlanta delivers residential pressure washing and soft washing across Metro Atlanta. Boost curb appeal with fast quotes and surface-safe cleaning.",
     images: ["/images/og-image.svg"]
   },
-  metadataBase: new URL("https://pressurewashofatlanta.com"),
+  metadataBase: new URL("https://pressurewash-atl.vercel.app"),
   alternates: {
     canonical: "/"
   },
