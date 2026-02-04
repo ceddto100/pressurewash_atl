@@ -6,6 +6,14 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --wash-progress: 0;
+  --wash-offset: 0px;
+  --wash-offset-secondary: 0px;
+  --wash-offset-negative: 0px;
+  --wash-offset-secondary-negative: 0px;
+}
+
 body {
   @apply bg-white text-slate-900 antialiased;
 }
@@ -44,6 +52,37 @@ section {
   @apply text-sm font-semibold text-slate-700;
 }
 
+.quote-form {
+  @apply rounded-3xl border-2 border-brand-200 bg-white px-6 py-8 shadow-[0_20px_60px_rgba(14,116,144,0.18)] ring-1 ring-brand-100;
+  background-image: radial-gradient(circle at top, rgba(14, 165, 233, 0.18), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.15), transparent 45%);
+}
+
+.quote-form .label {
+  @apply text-slate-800;
+}
+
+.quote-form .input {
+  @apply border-brand-200 bg-slate-50 focus:border-brand-500 focus:ring-brand-200;
+}
+
+.quote-form__option {
+  @apply border-brand-100 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md;
+}
+
+.quote-form__option input:checked {
+  @apply outline outline-2 outline-brand-200;
+}
+
+.quote-form__button {
+  @apply shadow-[0_14px_30px_rgba(14,116,144,0.35)];
+  background-image: linear-gradient(135deg, #0284c7, #0ea5e9, #22d3ee);
+}
+
+.quote-form__button:hover {
+  background-image: linear-gradient(135deg, #0369a1, #0284c7, #0ea5e9);
+}
+
 .button-primary {
   @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-200;
 }
@@ -54,4 +93,42 @@ section {
 
 .link-brand {
   @apply text-brand-600 hover:text-brand-700 font-semibold;
+}
+
+.pressure-wash-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0.45;
+  background-image: radial-gradient(
+      circle at 35% calc(120px + var(--wash-offset)),
+      rgba(56, 189, 248, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 70% calc(80px + var(--wash-offset-secondary)),
+      rgba(125, 211, 252, 0.28),
+      transparent 60%
+    ),
+    repeating-linear-gradient(
+      120deg,
+      rgba(56, 189, 248, 0.28) 0,
+      rgba(56, 189, 248, 0.28) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  background-size: 140% 140%, 160% 160%, 220% 220%;
+  background-position:
+    0 var(--wash-offset-secondary-negative),
+    0 var(--wash-offset-negative),
+    0 var(--wash-offset-negative);
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pressure-wash-overlay {
+    opacity: 0.15;
+  }
 }

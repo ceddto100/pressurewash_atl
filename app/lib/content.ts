@@ -72,27 +72,6 @@ export const testimonials = [
     rating: 5,
     quote:
       "Great service and strong attention to detail. Our walkway is bright again."
-  },
-  {
-    name: "Kim L.",
-    neighborhood: "Brookhaven",
-    rating: 5,
-    quote:
-      "Fast scheduling and no surprises. The house wash made our paint pop."
-  },
-  {
-    name: "Olivia C.",
-    neighborhood: "Alpharetta",
-    rating: 5,
-    quote:
-      "Pricing was clear and fair. The crew protected our landscaping, too."
-  },
-  {
-    name: "Erin W.",
-    neighborhood: "Atlanta",
-    rating: 5,
-    quote:
-      "Our brick entryway looks incredible. Easy process from start to finish."
   }
 ];
 
