@@ -110,7 +110,7 @@ export default function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleFormSubmit} className="space-y-6">
+    <form onSubmit={handleFormSubmit} className="quote-form space-y-6">
       <input
         type="hidden"
         name="_subject"
@@ -195,7 +195,7 @@ export default function QuoteForm() {
           {serviceOptions.map((service) => (
             <label
               key={service}
-              className="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-700"
+              className="quote-form__option flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-700"
             >
               <input
                 type="checkbox"
@@ -318,7 +318,7 @@ export default function QuoteForm() {
 
       <button
         type="submit"
-        className="button-primary w-full"
+        className="button-primary quote-form__button w-full"
         disabled={state.submitting}
       >
         {state.submitting ? "Submitting..." : "Get a Free Quote"}
