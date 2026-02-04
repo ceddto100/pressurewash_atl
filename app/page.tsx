@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
 import Header from "./components/Header";
+import PressureWashOverlay from "./components/PressureWashOverlay";
 import QuoteForm from "./components/QuoteForm";
 import { business } from "./lib/business";
 import { faqs, gallery, services, testimonials } from "./lib/content";
@@ -21,6 +22,7 @@ export default function Home() {
       >
         Skip to content
       </a>
+      <PressureWashOverlay />
       <Header />
       <main id="main" className="overflow-hidden">
         <section className="gradient-hero">
