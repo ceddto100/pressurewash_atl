@@ -12,16 +12,13 @@ export default function PressureWashOverlay() {
       const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
       const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-      const offset = Math.round(progress * 600);
-      const offsetSecondary = Math.round(progress * 420);
+      const x = Math.round(progress * 80 + 10);
+      const y = Math.round(progress * 70 + 10);
+      const sweep = Math.round(progress * 40);
       root.style.setProperty("--wash-progress", progress.toFixed(4));
-      root.style.setProperty("--wash-offset", `${offset}px`);
-      root.style.setProperty("--wash-offset-secondary", `${offsetSecondary}px`);
-      root.style.setProperty("--wash-offset-negative", `${-offset}px`);
-      root.style.setProperty(
-        "--wash-offset-secondary-negative",
-        `${-offsetSecondary}px`
-      );
+      root.style.setProperty("--wash-x", `${x}%`);
+      root.style.setProperty("--wash-y", `${y}%`);
+      root.style.setProperty("--wash-sweep", `${sweep}deg`);
     };
 
     const onScroll = () => {
@@ -43,5 +40,10 @@ export default function PressureWashOverlay() {
     };
   }, []);
 
-  return <div aria-hidden="true" className="pressure-wash-overlay" />;
+  return (
+    <div aria-hidden="true" className="pressure-wash-overlay">
+      <span className="pressure-wash-nozzle" />
+      <span className="pressure-wash-spray" />
+    </div>
+  );
 }
