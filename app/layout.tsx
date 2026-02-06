@@ -96,6 +96,7 @@ export default function RootLayout({
             __html: JSON.stringify(businessSchema)
           }}
         />
+        <meta name="apple-mobile-web-app-title" content="Pressure Wash" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
