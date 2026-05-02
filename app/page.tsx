@@ -14,10 +14,10 @@ const trustBadges = [
 
 export default function Home() {
   return (
-    <div id="top" className="text-slate-900">
+    <div id="top" className="text-white">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
       >
         Skip to content
       </a>
@@ -26,14 +26,14 @@ export default function Home() {
         <section className="gradient-hero">
           <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 sm:px-6 lg:flex-row lg:items-center">
             <div className="flex-1 space-y-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-400">
                 Metro Atlanta Pressure Washing
               </p>
-              <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">
+              <h1 className="text-4xl text-white sm:text-5xl">
                 Restore curb appeal and protect your home with safe, premium
                 pressure washing.
               </h1>
-              <p className="text-lg text-slate-600">
+              <p className="text-lg text-slate-400">
                 Pressure Wash of Atlanta is a locally owned and operated
                 exterior cleaning company serving homeowners across Metro
                 Atlanta. We specialize in professional pressure washing and soft
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <div className="glass-card rounded-3xl p-6">
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-100">
+                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-dark-700">
                   <Image
                     src="/images/og-image.png"
                     alt="Pressure washed home in Metro Atlanta"
@@ -78,19 +78,19 @@ export default function Home() {
                   />
                 </div>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                    <p className="text-sm font-semibold text-slate-900">
+                  <div className="rounded-2xl border border-dark-500 bg-dark-700 p-4">
+                    <p className="text-sm font-semibold text-white">
                       Same-week scheduling
                     </p>
-                    <p className="mt-2 text-sm text-slate-600">
+                    <p className="mt-2 text-sm text-slate-400">
                       Quick turnarounds for driveways, siding, patios, and more.
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                    <p className="text-sm font-semibold text-slate-900">
+                  <div className="rounded-2xl border border-dark-500 bg-dark-700 p-4">
+                    <p className="text-sm font-semibold text-white">
                       Surface-safe cleaning
                     </p>
-                    <p className="mt-2 text-sm text-slate-600">
+                    <p className="mt-2 text-sm text-slate-400">
                       Soft wash options protect paint, siding, and landscaping.
                     </p>
                   </div>
@@ -118,16 +118,16 @@ export default function Home() {
                 className="glass-card flex flex-col justify-between rounded-2xl p-6"
               >
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg text-white">
                     {service.title}
                   </h3>
-                  <p className="mt-3 text-sm text-slate-600">
+                  <p className="mt-3 text-sm text-slate-400">
                     {service.description}
                   </p>
                   <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
                     Surfaces
                   </p>
-                  <p className="mt-2 text-sm text-slate-600">
+                  <p className="mt-2 text-sm text-slate-400">
                     {service.surfaces}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="gallery" className="bg-slate-50">
+        <section id="gallery" className="bg-dark-800">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <h2 className="section-title">Recent Results</h2>
@@ -181,10 +181,10 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="px-6 py-4">
-                      <h3 className="text-lg font-semibold text-slate-900">
+                      <h3 className="text-lg text-white">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-sm text-slate-400">
                         Before-and-after comparison.
                       </p>
                     </div>
@@ -204,11 +204,11 @@ export default function Home() {
                 cleaner, brighter exteriors.
               </p>
             </div>
-            <div className="rounded-2xl border border-brand-100 bg-brand-50 px-6 py-4">
-              <p className="text-sm font-semibold text-brand-700">
+            <div className="rounded-2xl border border-brand-500/30 bg-brand-500/10 px-6 py-4">
+              <p className="text-sm font-semibold text-brand-300">
                 5-star local feedback
               </p>
-              <p className="text-xs text-brand-600">
+              <p className="text-xs text-brand-400">
                 Consistently rated for professionalism and results.
               </p>
             </div>
@@ -220,14 +220,14 @@ export default function Home() {
                 className="glass-card flex flex-col gap-4 rounded-2xl p-6"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-600 text-sm font-semibold text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-500 text-sm font-semibold text-white">
                     {review.name
                       .split(" ")
                       .map((part) => part[0])
                       .join("")}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">
+                    <p className="text-sm font-semibold text-white">
                       {review.name}
                     </p>
                     <p className="text-xs text-slate-500">
@@ -235,16 +235,16 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="text-sm text-slate-600">
+                <div className="text-sm text-accent-400">
                   {"★".repeat(review.rating)}
                 </div>
-                <p className="text-sm text-slate-600">“{review.quote}”</p>
+                <p className="text-sm text-slate-400">"{review.quote}"</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section id="pricing" className="bg-slate-50">
+        <section id="pricing" className="bg-dark-800">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="max-w-2xl">
               <h2 className="section-title">Transparent starting ranges</h2>
@@ -258,10 +258,10 @@ export default function Home() {
                 <p className="text-sm font-semibold text-slate-500">
                   Minimum service call
                 </p>
-                <p className="mt-4 text-3xl font-semibold text-slate-900">
+                <p className="mt-4 text-3xl text-accent-400">
                   $149
                 </p>
-                <p className="mt-2 text-sm text-slate-600">
+                <p className="mt-2 text-sm text-slate-400">
                   Minimum service call for residential pressure washing.
                 </p>
               </div>
@@ -269,10 +269,10 @@ export default function Home() {
                 <p className="text-sm font-semibold text-slate-500">
                   Driveway & concrete cleaning
                 </p>
-                <p className="mt-4 text-3xl font-semibold text-slate-900">
+                <p className="mt-4 text-3xl text-accent-400">
                   Starting at $149
                 </p>
-                <p className="mt-2 text-sm text-slate-600">
+                <p className="mt-2 text-sm text-slate-400">
                   Surface-safe cleaning to lift dirt, mildew, and stains.
                 </p>
               </div>
@@ -280,15 +280,15 @@ export default function Home() {
                 <p className="text-sm font-semibold text-slate-500">
                   House Washing (Soft Wash for Siding)
                 </p>
-                <p className="mt-4 text-3xl font-semibold text-slate-900">
+                <p className="mt-4 text-3xl text-accent-400">
                   Starting at $199
                 </p>
-                <p className="mt-2 text-sm text-slate-600">
+                <p className="mt-2 text-sm text-slate-400">
                   Gentle exterior cleaning for siding and trim.
                 </p>
               </div>
             </div>
-            <div className="mt-8 flex flex-col gap-3 text-sm text-slate-600">
+            <div className="mt-8 flex flex-col gap-3 text-sm text-slate-500">
               <p>Bundled services available for added value.</p>
               <p>
                 Final pricing depends on surface size, condition, access, and
@@ -303,11 +303,11 @@ export default function Home() {
             <div>
               <h2 className="section-title">Get your fast, free quote</h2>
               <p className="section-subtitle">
-                Tell us about the surfaces you want cleaned and we’ll respond
+                Tell us about the surfaces you want cleaned and we'll respond
                 quickly with a tailored estimate.
               </p>
-              <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-600">
-                <p className="font-semibold text-slate-900">
+              <div className="mt-8 rounded-2xl border border-dark-600 bg-dark-800 p-6 text-sm text-slate-400">
+                <p className="font-semibold text-white">
                   What happens next?
                 </p>
                 <ul className="mt-4 list-disc space-y-2 pl-6">
@@ -316,10 +316,10 @@ export default function Home() {
                   <li>We schedule and deliver spotless results.</li>
                 </ul>
               </div>
-              <div className="mt-6 rounded-2xl border border-brand-100 bg-brand-50 p-6 text-sm text-brand-700">
+              <div className="mt-6 rounded-2xl border border-brand-500/30 bg-brand-500/10 p-6 text-sm text-brand-300">
                 <p className="font-semibold">Water source note</p>
                 <p className="mt-2">
-                  Residential service uses the home’s exterior water spigot at
+                  Residential service uses the home's exterior water spigot at
                   the service location.
                 </p>
               </div>
@@ -330,7 +330,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="service-area" className="bg-slate-50">
+        <section id="service-area" className="bg-dark-800">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
               <div>
@@ -339,30 +339,30 @@ export default function Home() {
                   We focus on residential pressure washing across the metro
                   area, including the neighborhoods below.
                 </p>
-                <ul className="mt-6 grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
+                <ul className="mt-6 grid gap-3 text-sm text-slate-400 sm:grid-cols-2">
                   {business.suburbs.map((suburb) => (
                     <li
                       key={suburb}
-                      className="rounded-xl border border-slate-200 bg-white px-4 py-3"
+                      className="rounded-xl border border-dark-500 bg-dark-700 px-4 py-3"
                     >
                       {suburb}
                     </li>
                   ))}
                 </ul>
                 <p className="mt-4 text-sm text-slate-500">
-                  Don’t see your neighborhood? Reach out and we’ll confirm
+                  Don't see your neighborhood? Reach out and we'll confirm
                   availability.
                 </p>
               </div>
               <div className="glass-card flex h-full flex-col items-center justify-center rounded-3xl p-8 text-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 text-white">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-500 text-white">
                   <span className="text-2xl">📍</span>
                 </div>
-                <p className="mt-4 text-lg font-semibold text-slate-900">
+                <p className="mt-4 text-lg text-white">
                   Request Service in Metro Atlanta
                 </p>
-                <p className="mt-2 text-sm text-slate-600">
-                  Tell us which surfaces you want cleaned and we’ll confirm
+                <p className="mt-2 text-sm text-slate-400">
+                  Tell us which surfaces you want cleaned and we'll confirm
                   availability quickly.
                 </p>
                 <a href="#quote" className="button-primary mt-6 w-full">
@@ -383,28 +383,28 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {faqs.map((faq) => (
               <div key={faq.question} className="glass-card rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-slate-900">
+                <h3 className="text-lg text-white">
                   {faq.question}
                 </h3>
-                <p className="mt-3 text-sm text-slate-600">{faq.answer}</p>
+                <p className="mt-3 text-sm text-slate-400">{faq.answer}</p>
               </div>
             ))}
           </div>
-          <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-600">
-            <p className="font-semibold text-slate-900">
+          <div className="mt-10 rounded-2xl border border-dark-600 bg-dark-800 p-6 text-sm text-slate-400">
+            <p className="font-semibold text-white">
               Need quick answers?
             </p>
             <p className="mt-2">
               Call or Text{" "}
-              <a className="text-brand-700 underline" href={`tel:${business.phone}`}>
+              <a className="text-brand-400 underline" href={`tel:${business.phone}`}>
                 {business.phoneDisplay}
               </a>{" "}
-              and we’ll help you plan the right service.
+              and we'll help you plan the right service.
             </p>
           </div>
         </section>
 
-        <section className="bg-slate-50">
+        <section className="bg-dark-800">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
             <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
@@ -413,7 +413,7 @@ export default function Home() {
                   We treat every home with care, focusing on surface protection,
                   curb appeal, and long-lasting results.
                 </p>
-                <ul className="mt-6 space-y-3 text-sm text-slate-600">
+                <ul className="mt-6 space-y-3 text-sm text-slate-400">
                   <li>
                     Locally owned with service tailored to Metro Atlanta
                     neighborhoods.
@@ -426,12 +426,12 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="glass-card rounded-3xl p-8 text-sm text-slate-600">
-                <p className="font-semibold text-slate-900">
+              <div className="glass-card rounded-3xl p-8 text-sm text-slate-400">
+                <p className="font-semibold text-white">
                   Ready to refresh your exterior?
                 </p>
                 <p className="mt-3">
-                  Request service today and we’ll confirm details, provide a
+                  Request service today and we'll confirm details, provide a
                   transparent quote, and schedule service that fits your week.
                 </p>
                 <div className="mt-6">
@@ -444,24 +444,24 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t border-slate-200">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-12 text-sm text-slate-600 sm:px-6 md:grid-cols-3">
+      <footer className="border-t border-dark-600">
+        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-12 text-sm text-slate-400 sm:px-6 md:grid-cols-3">
           <div>
-            <p className="text-base font-semibold text-slate-900">
+            <p className="text-base font-semibold text-white">
               {business.name}
             </p>
             <p className="mt-2">{business.area}</p>
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Contact</p>
+            <p className="font-semibold text-white">Contact</p>
             <p className="mt-2">
-              <a className="hover:text-slate-900" href={`tel:${business.phone}`}>
+              <a className="hover:text-white transition" href={`tel:${business.phone}`}>
                 {business.phoneDisplay}
               </a>
             </p>
             <p className="mt-1">
               <a
-                className="hover:text-slate-900"
+                className="hover:text-white transition"
                 href={`mailto:${business.email}`}
               >
                 {business.email}
@@ -469,7 +469,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Hours</p>
+            <p className="font-semibold text-white">Hours</p>
             <p className="mt-2">Mon–Sat: 8am – 7pm</p>
             <p className="mt-1">Sun: By request</p>
           </div>

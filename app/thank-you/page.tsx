@@ -4,14 +4,14 @@ import { business } from "../lib/business";
 export default function ThankYouPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-3xl flex-col justify-center px-4 py-20 text-center sm:px-6">
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-400">
         Quote request received
       </p>
-      <h1 className="mt-4 text-4xl font-semibold text-slate-900">
+      <h1 className="mt-4 text-4xl text-white">
         Thanks for reaching out!
       </h1>
-      <p className="mt-4 text-lg text-slate-600">
-        We’ll review your details and follow up within 24 hours with next steps
+      <p className="mt-4 text-lg text-slate-400">
+        We'll review your details and follow up within 24 hours with next steps
         and a clear estimate.
       </p>
       <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

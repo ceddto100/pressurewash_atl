@@ -100,9 +100,9 @@ export default function QuoteForm() {
 
   if (state.succeeded) {
     return (
-      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-center text-emerald-800">
-        <h2 className="text-lg font-semibold">Thanks for reaching out!</h2>
-        <p className="mt-2 text-sm text-emerald-700">
+      <div className="rounded-2xl border border-brand-500/30 bg-brand-500/10 p-6 text-center text-brand-300">
+        <h2 className="text-lg text-white">Thanks for reaching out!</h2>
+        <p className="mt-2 text-sm text-brand-400">
           We received your request and will follow up shortly.
         </p>
       </div>
@@ -195,7 +195,11 @@ export default function QuoteForm() {
           {serviceOptions.map((service) => (
             <label
               key={service}
-              className="quote-form__option flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-700"
+              className={`quote-form__option flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm transition ${
+                formState.services.includes(service)
+                  ? "border-brand-500 bg-brand-500/10 text-brand-300"
+                  : "border-dark-500 bg-dark-700 text-slate-300"
+              }`}
             >
               <input
                 type="checkbox"
@@ -203,7 +207,7 @@ export default function QuoteForm() {
                 value={service}
                 checked={formState.services.includes(service)}
                 onChange={() => toggleService(service)}
-                className="h-4 w-4 accent-brand-600"
+                className="h-4 w-4 accent-brand-500"
               />
               {service}
             </label>
@@ -259,7 +263,7 @@ export default function QuoteForm() {
             <option value="No">No</option>
           </select>
           <p className="text-xs text-slate-500">
-            Residential service uses the home’s exterior water spigot.
+            Residential service uses the home's exterior water spigot.
           </p>
           <ValidationError
             prefix="Exterior Water Spigot"
@@ -311,7 +315,7 @@ export default function QuoteForm() {
       </div>
 
       {error && (
-        <div className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+        <div className="rounded-xl border border-rose-500/40 bg-rose-500/10 px-4 py-3 text-sm text-rose-400">
           {error}
         </div>
       )}
@@ -325,7 +329,7 @@ export default function QuoteForm() {
       </button>
       <p className="text-center text-xs text-slate-500">
         Prefer to talk now?{" "}
-        <a className="text-brand-700 underline" href={`tel:${business.phone}`}>
+        <a className="text-brand-400 underline" href={`tel:${business.phone}`}>
           Call or Text {business.phoneDisplay}
         </a>
         .

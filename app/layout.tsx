@@ -1,9 +1,21 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Anton, Barlow } from "next/font/google";
 import { business, businessSchema } from "./lib/business";
 
-const inter = Inter({ subsets: ["latin"] });
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-anton",
+  display: "swap"
+});
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: "Pressure Wash of Atlanta | Metro Atlanta Pressure Washing",
@@ -97,7 +109,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${anton.variable} ${barlow.variable} font-barlow`}>
+        {children}
+      </body>
     </html>
   );
 }

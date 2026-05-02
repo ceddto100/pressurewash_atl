@@ -7,7 +7,13 @@ html {
 }
 
 body {
-  @apply bg-white text-slate-900 antialiased;
+  @apply bg-dark-900 text-white antialiased;
+  font-family: var(--font-barlow), sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-anton), Impact, sans-serif;
+  letter-spacing: 0.04em;
 }
 
 section {
@@ -15,74 +21,78 @@ section {
 }
 
 .gradient-hero {
-  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 55%),
-    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.2), transparent 40%),
-    #ffffff;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 163, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse at 15% 60%, rgba(0, 122, 204, 0.15), transparent 50%),
+    #080C18;
 }
 
 .glass-card {
-  @apply bg-white/80 backdrop-blur border border-slate-200 shadow-soft;
+  @apply bg-dark-800/80 backdrop-blur border border-dark-600 shadow-soft;
 }
 
 .badge {
-  @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm;
+  @apply inline-flex items-center gap-2 rounded-full border border-brand-500/40 bg-brand-500/10 px-4 py-2 text-sm font-medium text-brand-300;
 }
 
 .section-title {
-  @apply text-3xl font-semibold text-slate-900 sm:text-4xl;
+  @apply text-3xl text-white sm:text-4xl;
+  font-family: var(--font-anton), Impact, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .section-subtitle {
-  @apply mt-3 text-base text-slate-600 sm:text-lg;
+  @apply mt-3 text-base text-slate-400 sm:text-lg;
 }
 
 .input {
-  @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
+  @apply w-full rounded-xl border border-dark-500 bg-dark-700 px-4 py-3 text-sm text-white shadow-sm placeholder:text-slate-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30;
 }
 
 .label {
-  @apply text-sm font-semibold text-slate-700;
+  @apply text-sm font-semibold text-slate-300;
 }
 
 .quote-form {
-  @apply rounded-3xl border-2 border-brand-200 bg-white px-6 py-8 shadow-[0_20px_60px_rgba(14,116,144,0.18)] ring-1 ring-brand-100;
-  background-image: radial-gradient(circle at top, rgba(14, 165, 233, 0.18), transparent 55%),
-    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.15), transparent 45%);
+  @apply rounded-3xl border border-brand-500/30 bg-dark-800 px-6 py-8;
+  box-shadow: 0 20px 60px rgba(0, 163, 255, 0.15);
 }
 
 .quote-form .label {
-  @apply text-slate-800;
+  @apply text-slate-200;
 }
 
 .quote-form .input {
-  @apply border-brand-200 bg-slate-50 focus:border-brand-500 focus:ring-brand-200;
+  @apply border-dark-500 bg-dark-700 text-white focus:border-brand-500 focus:ring-brand-500/30;
 }
 
 .quote-form__option {
-  @apply border-brand-100 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md;
+  @apply border-dark-500 bg-dark-700 text-slate-300 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-500 hover:shadow-md cursor-pointer;
 }
 
-.quote-form__option input:checked {
-  @apply outline outline-2 outline-brand-200;
+.quote-form__option input:checked ~ span,
+.quote-form__option:has(input:checked) {
+  @apply border-brand-500 bg-brand-500/10 text-brand-300;
 }
 
 .quote-form__button {
-  @apply shadow-[0_14px_30px_rgba(14,116,144,0.35)];
-  background-image: linear-gradient(135deg, #0284c7, #0ea5e9, #22d3ee);
+  box-shadow: 0 14px 30px rgba(0, 163, 255, 0.35);
+  background-image: linear-gradient(135deg, #007ACC, #00A3FF, #33BFFF);
 }
 
 .quote-form__button:hover {
-  background-image: linear-gradient(135deg, #0369a1, #0284c7, #0ea5e9);
+  background-image: linear-gradient(135deg, #005C99, #007ACC, #00A3FF);
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-200;
+  @apply inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500/40;
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-brand-600 px-6 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-200;
+  @apply inline-flex items-center justify-center rounded-full border border-brand-500 px-6 py-3 text-sm font-semibold text-brand-400 transition hover:bg-brand-500/10 focus:outline-none focus:ring-2 focus:ring-brand-500/40;
 }
 
 .link-brand {
-  @apply text-brand-600 hover:text-brand-700 font-semibold;
+  @apply text-brand-400 hover:text-brand-300 font-semibold;
 }
